@@ -3,6 +3,7 @@
 {% block title %}Hello ProduitController!{% endblock %}
 
 {% block body %}
+    {#
     <div class="container">
         <h2> Nos produits en Base</h2>
         <div class="row flex">
@@ -21,5 +22,28 @@
                 </div>
             {% endfor %}
         </div>
+    </div>
+    #}
+    <div class="container mt-4">
+        <h1>Gérer les Produits</h1>
+        <a href="{{ path('admin_produit_add') }}" class="btn btn-success ">Ajouter</a>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for produit in produits %}
+                <tr>
+                    <td>{{ produit.titre }}</td>
+                    <td>
+                        <a href="{{path('admin_produit_edit',{'slug':produit.slug})}}"class="btn btn-secondary">Editer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}

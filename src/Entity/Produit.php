@@ -22,6 +22,7 @@ class Produit
         7=>'Marron',
         8=>'Viollet',
         9=>'Rouge',
+        10=>'Cyan',
     ];
 
     /**

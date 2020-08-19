@@ -3,6 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Produit;
+use App\Form\ProduitType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -34,24 +36,50 @@ class ProduitController extends AbstractController
     }
 
     /**
+     * @Route("/admin/produit/edit/{slug}", name="admin_produit_edit", requirements={"slug"="[a-zA-Z0-9\-]+"})
+     */
+    public function edit(Produit $produit, Request $request)
+    {
+
+        $form=$this->createForm(ProduitType::class,$produit);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em=$this->getDoctrine()->getManager();
+            $em->flush();
+            return $this->redirectToRoute('admin_produit_show',["slug"=>$produit->getSlug()]);
+        }
+
+        return $this->render('admin/produit/edit.html.twig', [
+            'produit' => $produit,
+            'form'=>$form->createView()
+        ]);
+    }
+
+
+
+    /**
      * @Route("/admin/produit/add", name="admin_produit_add")
      */
-    public function Add()
+    public function Add(Request $request)
     {
-        $produit = new Produit();
-        $produit->setTitre('TV 186 cm')
-            ->setDescription('NA')
-            ->setPoids(18)
-            ->setPrixTTC(120)
-            ->setCouleur(2)
-            ->setStockQte(4);
+        $produit=new Produit();
 
-        //Enregistrement bdd
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($produit);
-        $em->flush();
+        $form=$this->createForm(ProduitType::class,$produit);
+        $form->handleRequest($request);
 
-        return $this->redirectToRoute("admin_produit");
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em=$this->getDoctrine()->getManager();
+            $em->persist();
+            $em->flush();
+            return $this->redirectToRoute('admin_produit_edit',["slug"=>$produit->getSlug()]);
+        }
+
+        return $this->render('admin/produit/add.html.twig', [
+            'form'=>$form->createView()
+        ]);
 
     }
 }
