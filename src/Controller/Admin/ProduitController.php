@@ -15,33 +15,21 @@ class ProduitController extends AbstractController
     public function index()
     {
         $produitRepo=$this->getDoctrine()->getRepository(Produit::class);
-        $produit1=$produitRepo->find(1);
-        dump($produit1);
-        $produit2=$produitRepo->findBy(['prixTTC'=>120]);
-        dump($produit2);
-
-        $produit3 = $produitRepo->actif(false);
-        dump($produit3);
+        $produits = $produitRepo->findAll();
 
         return $this->render('admin/produit/index.html.twig', [
-            'controller_name' => 'ProduitController',
-            'produit' => $produit1
+            'produits'=>$produits
         ]);
     }
 
     /**
      * @param $id
-     * @Route("/admin/produit/show/{id}", name="admin_produit_show", requirements={"id"="\d+"})
+     * @Route("/admin/produit/show/{slug}", name="admin_produit_show", requirements={"slug"="[a-zA-Z0-9\-]+"})
      */
-    public function show($id)
+    public function show(Produit $produit)
     {
-        $produitRepo=$this->getDoctrine()->getRepository(Produit::class);
-        $produit1=$produitRepo->find($id);
-        dump($produit1);
-
-        return $this->render('admin/produit/index.html.twig', [
-            'controller_name' => 'ProduitController',
-            'produit' => $produit1
+        return $this->render('admin/produit/show.html.twig', [
+            'produit' => $produit
         ]);
     }
 

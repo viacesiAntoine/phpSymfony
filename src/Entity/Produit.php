@@ -11,6 +11,19 @@ use Gedmo\Mapping\Annotation as Gedmo;
  */
 class Produit
 {
+
+    Const COULEUR=[
+        1=>'Blanc',
+        2=>'Noir',
+        3=>'Rose',
+        4=>'Bleu',
+        5=>'Vert',
+        6=>'Jaune',
+        7=>'Marron',
+        8=>'Viollet',
+        9=>'Rouge',
+    ];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -187,4 +200,10 @@ class Produit
 
         return $this;
     }
+
+    public function getCouleurType()
+    {
+        return self::COULEUR[$this->getCouleur()];
+    }
+
 }

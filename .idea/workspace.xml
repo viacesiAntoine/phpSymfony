@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2415891e-f502-4ac3-8d23-9b6c39d70893" name="Default Changelist" comment="" />
+    <list default="true" id="2415891e-f502-4ac3-8d23-9b6c39d70893" name="Default Changelist" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/produit/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfonyCours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfonyCours.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/produit/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +50,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -126,9 +162,13 @@
       <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
       <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
       <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gGXGwVl9u5Pl1brpODfU7swwMm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -152,11 +192,38 @@
       <workItem from="1597741812228" duration="123000" />
       <workItem from="1597742001366" duration="3375000" />
       <workItem from="1597746567921" duration="12856000" />
+      <workItem from="1597763941759" duration="899000" />
+      <workItem from="1597765659150" duration="1853000" />
+      <workItem from="1597820830097" duration="2329000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1597764227665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597764227665</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="mise a jour" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise a jour" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="309" key="#Composer" timestamp="1597742094703">
@@ -175,29 +242,37 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1440.860@0.0.1440.860" timestamp="1597751325067" />
-    <state width="1293" height="222" key="GridCell.Tab.0.bottom" timestamp="1597763770873">
+    <state width="1293" height="222" key="GridCell.Tab.0.bottom" timestamp="1597823094280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="468" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1597755017016" />
-    <state width="1293" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597763770873" />
-    <state width="1293" height="222" key="GridCell.Tab.0.center" timestamp="1597763770873">
+    <state width="1293" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597823094280" />
+    <state width="1293" height="222" key="GridCell.Tab.0.center" timestamp="1597823094280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="468" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1597755017016" />
-    <state width="1293" height="222" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597763770873" />
-    <state width="1293" height="222" key="GridCell.Tab.0.left" timestamp="1597763770873">
+    <state width="1293" height="222" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597823094280" />
+    <state width="1293" height="222" key="GridCell.Tab.0.left" timestamp="1597823094280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="468" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1597755017016" />
-    <state width="1293" height="222" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597763770873" />
-    <state width="1293" height="222" key="GridCell.Tab.0.right" timestamp="1597763770873">
+    <state width="1293" height="222" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597823094280" />
+    <state width="1293" height="222" key="GridCell.Tab.0.right" timestamp="1597823094280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="468" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1597755017016" />
-    <state width="1293" height="222" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597763770873" />
+    <state width="1293" height="222" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597823094280" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1597741941400">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="221" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1597741941400" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597764232668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597764232668" />
+    <state x="573" y="308" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597764086938">
+      <screen x="0" y="0" width="1440" height="737" />
+    </state>
+    <state x="573" y="308" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1440.737@0.0.1440.737" timestamp="1597764086938" />
   </component>
 </project>
