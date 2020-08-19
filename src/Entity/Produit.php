@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
@@ -72,6 +73,7 @@ class Produit
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\Regex("/^[0-9]{2,}[.]?[0-9]*$/")
      */
     private $Poids;
 
@@ -87,6 +89,7 @@ class Produit
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min="3",max="100")
      */
     private $StockQte;
 
@@ -94,6 +97,12 @@ class Produit
      * @ORM\Column(type="boolean",options={"default":false})
      */
     private $Actif;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Marque::class, inversedBy="Produits")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $marque;
 
     public function __construct()
     {
@@ -205,6 +214,18 @@ class Produit
     public function getCouleurType()
     {
         return self::COULEUR[$this->getCouleur()];
+    }
+
+    public function getMarque(): ?Marque
+    {
+        return $this->marque;
+    }
+
+    public function setMarque(?Marque $marque): self
+    {
+        $this->marque = $marque;
+
+        return $this;
     }
 
 }

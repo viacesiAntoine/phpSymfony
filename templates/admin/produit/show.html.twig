@@ -35,6 +35,10 @@
                             <td>Couleur</td>
                             <td>{{ produit.couleurType }}</td>
                         </tr>
+                        <tr>
+                            <td>Marque</td>
+                            <td>{{ produit.marque.nom }}</td>
+                        </tr>
                     </table>
                 </div>
                 <div class="col-md-4">
@@ -42,5 +46,16 @@
                 </div>
             </div>
         </div>
+    <div class="container mt-4">
+        <a href="{{path('admin_produit_edit',{'slug':produit.slug})}}"class="btn btn-secondary">Editer</a>
+        <form method="post" action="{{ path('admin_produit_delete', {slug: produit.slug}) }}"
+              onsubmit="return confirm('Sur ?')"
+              style="display: inline-block"
+        >
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.slug) }}">
+            <button class="btn btn-danger">Supprimer</button>
+        </form>
+    </div>
     </div>
 {% endblock %}

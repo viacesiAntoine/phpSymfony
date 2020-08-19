@@ -3,5 +3,5 @@
 {% block title %}Editer le produit{% endblock %}
 
 {% block body %}
-    {% include 'template/_formProduit.html.twig' %}
+    {% include 'template/_formProduit.html.twig' with {'formType':'edit'} %}
 {% endblock %}

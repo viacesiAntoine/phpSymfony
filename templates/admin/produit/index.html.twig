@@ -26,6 +26,13 @@
     #}
     <div class="container mt-4">
         <h1>Gérer les Produits</h1>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endfor %}
         <a href="{{ path('admin_produit_add') }}" class="btn btn-success ">Ajouter</a>
         <table class="table table-striped">
             <thead>
@@ -37,9 +44,17 @@
             <tbody>
             {% for produit in produits %}
                 <tr>
-                    <td>{{ produit.titre }}</td>
+                    <td><a href="{{path('admin_produit_show',{'slug':produit.slug})}}">{{ produit.Titre }}</a></td>
                     <td>
                         <a href="{{path('admin_produit_edit',{'slug':produit.slug})}}"class="btn btn-secondary">Editer</a>
+                        <form method="post" action="{{ path('admin_produit_delete', {slug: produit.slug}) }}"
+                        onsubmit="return confirm('Sur ?')"
+                        style="display: inline-block"
+                        >
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.slug) }}">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
                     </td>
                 </tr>
             {% endfor %}

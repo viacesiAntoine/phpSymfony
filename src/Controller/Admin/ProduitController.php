@@ -57,8 +57,6 @@ class ProduitController extends AbstractController
         ]);
     }
 
-
-
     /**
      * @Route("/admin/produit/add", name="admin_produit_add")
      */
@@ -80,6 +78,27 @@ class ProduitController extends AbstractController
         return $this->render('admin/produit/add.html.twig', [
             'form'=>$form->createView()
         ]);
+
+    }
+
+    /**
+     * @Route("/admin/produit/delete/{slug}", name="admin_produit_delete", requirements={"slug"="[a-zA-Z0-9\-]+"}, methods="DELETE")
+     */
+    public function delete(Produit $produit, Request $request)
+    {
+        if($this->isCsrfTokenValid('delete'.$produit->getSlug(),$request->get('_token')))
+        {
+            $em=$this->getDoctrine()->getManager();
+            $em->remove($produit);
+            $em->flush();
+            $this->addFlash('success','FAIT');
+        }
+        else
+        {
+            $this->addFlash('error','t\'est con ');
+        }
+
+        return $this->redirectToRoute('admin_produit');
 
     }
 }
