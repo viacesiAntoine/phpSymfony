@@ -52,4 +52,22 @@ class ProduitRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
+
+    public function findAllByName($name) :array
+    {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery(
+            "SELECT p FROM App\Entity\Produit p WHERE p.Titre like :name"
+        )->setParameter('name',$name);
+        return $query->getArrayResult();
+    }
+
+    public function findAllByDescription($description):array
+    {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery(
+            "SELECT p FROM App\Entity\Produit p WHERE p.Description like :description"
+        )->setParameter('description',$description);
+        return $query->getArrayResult();
+    }
 }
