@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Magasin;
 use App\Entity\Marque;
 use App\Entity\Produit;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -39,7 +40,32 @@ class AppFixtures extends Fixture
                 ->setMarque($faker->randomElement($MarqueArray));
             $manager->persist($produit);
         }
-        $manager->flush();
 
+        $magasin1 = new Magasin();
+        $magasin1
+            ->setNom("ipeufgu")
+            ->setVille('Rouen');
+        $manager->persist($magasin1);
+
+        $magasin2 = new Magasin();
+        $magasin2
+            ->setNom("mqjksg")
+            ->setVille('Le Havre');
+        $manager->persist($magasin2);
+
+        $magasin3 = new Magasin();
+        $magasin3
+            ->setNom("xsfbv")
+            ->setVille('Tourville');
+        $manager->persist($magasin3);
+
+        $magasin4 = new Magasin();
+        $magasin4
+            ->setNom('zeyjrd')
+            ->setVille('Caen');
+        $manager->persist($magasin4);
+
+
+        $manager->flush();
     }
 }
