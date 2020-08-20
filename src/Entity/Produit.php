@@ -104,6 +104,11 @@ class Produit
      */
     private $marque;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Stock::class, inversedBy="relation")
+     */
+    private $stock;
+
     public function __construct()
     {
         $this->Actif=false;
@@ -224,6 +229,18 @@ class Produit
     public function setMarque(?Marque $marque): self
     {
         $this->marque = $marque;
+
+        return $this;
+    }
+
+    public function getStock(): ?Stock
+    {
+        return $this->stock;
+    }
+
+    public function setStock(?Stock $stock): self
+    {
+        $this->stock = $stock;
 
         return $this;
     }

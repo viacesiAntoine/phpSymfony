@@ -1,4 +1,84 @@
 {% extends'base.html.twig' %}
 {% block body %}
     {{ form_errors(form) }}
+    <h1>
+       Demande d'information sur le produit {{ produit.titre}}
+    </h1>
+
+    <section class="mb-4">
+
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+        <!--Section description-->
+        <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+            a matter of hours to help you.</p>
+
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                {{ form_start(form ,{'method' : 'post','name' : 'Contact'}) }}
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                {{ form_widget(form.Nom) }}
+                                <label for="name" class="">Your name</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                {{ form_widget(form.email) }}
+                                <label for="email" class="">Your email</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                {{ form_widget(form.sujet) }}
+                                <label for="subject" class="">Subject</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                {{ form_widget(form.message) }}
+                                <label for="message">Your message</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                <div class="text-center text-md-left">
+                    {{ form_rest(form) }}
+                    <button class="btn btn-primary">Send</button>
+                    {{ form_end(form) }}
+                </div>
+                <div class="status"></div>
+            </div>
+            <!--Grid column-->
+
+
+        </div>
+
+    </section>
 {% endblock %}

@@ -5,9 +5,12 @@ namespace App\Controller\Client;
 use App\Entity\Contact;
 use App\Entity\Produit;
 use App\Form\ContactType;
+use App\Services\Mail;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProduitController extends AbstractController
@@ -63,20 +66,27 @@ class ProduitController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/client/produit/show/{slug}/contact", name="client_produit_contact",requirements={"slug"="[a-zA-Z0-9\-]+"}))
      */
-    public function contact(Produit $produit,Request $request)
+    public function contact(Produit $produit,Request $request,Mail $mail)
     {
-        $form=$this->createForm(ContactType::class,new Contact());
+        $contact= new Contact();
+
+
+        $form=$this->createForm(ContactType::class,$contact);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid())
         {
+            $mail->sendMailInfo($produit,$form->getData());
 
+            return $this->redirectToRoute("default");
         }
 
-        return $this->render('admin/produit/edit.html.twig', [
+        return $this->render('client/produit/contact.html.twig', [
             'produit' => $produit,
+            'contact' => $contact,
             'form'=>$form->createView()
         ]);
     }

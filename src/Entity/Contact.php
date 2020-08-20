@@ -3,20 +3,56 @@
 
 namespace App\Entity;
 
-use App\Repository\ProduitRepository;
-use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
-use Symfony\Component\Validator\Constraints as Assert;
-
 class Contact
 {
-    Const to ="groupeContact@masocieter.com";
-
     private $nom;
 
     private $email;
 
     private $message;
+
+    private $sujet;
+
+    private $to;
+
+    public function __construct()
+    {
+        $this->setTo("groupeContact@masocieter.com");
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTo()
+    {
+        return $this->to;
+    }
+
+    /**
+     * @param mixed $to
+     * @return Contact
+     */
+    public function setTo($to)
+    {
+        $this->to = $to;
+        return $this;
+    }
+
+/**
+ * @return mixed
+ */
+public function getSujet()
+{
+    return $this->sujet;
+}/**
+ * @param mixed $sujet
+ * @return Contact
+ */
+public function setSujet($sujet)
+{
+    $this->sujet = $sujet;
+    return $this;
+}
 
     /**
      * @return mixed
