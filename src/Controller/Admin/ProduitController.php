@@ -25,7 +25,6 @@ class ProduitController extends AbstractController
     }
 
     /**
-     * @param $id
      * @Route("/admin/produit/show/{slug}", name="admin_produit_show", requirements={"slug"="[a-zA-Z0-9\-]+"})
      */
     public function show(Produit $produit)

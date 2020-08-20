@@ -19,13 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2415891e-f502-4ac3-8d23-9b6c39d70893" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/Services/MailTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/mail/TestMail.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="2415891e-f502-4ac3-8d23-9b6c39d70893" name="Default Changelist" comment="mail">
+      <change afterPath="$PROJECT_DIR$/src/Controller/Client/ProduitController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/client/produit/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/client/produit/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/template/_showProduit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfonyCours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfonyCours.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/produit/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/produit/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/produit/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +166,8 @@
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gGXGwVl9u5Pl1brpODfU7swwMm" />
@@ -172,11 +183,14 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/client/produit" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\www\symfonyCours\templates\client\produit" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\www\symfonyCours\src\Controller\Admin" />
       <recent name="C:\dev\www\symfonyCours\templates\admin" />
@@ -197,7 +211,8 @@
       <workItem from="1597763941759" duration="899000" />
       <workItem from="1597765659150" duration="1853000" />
       <workItem from="1597820830097" duration="14648000" />
-      <workItem from="1597840740553" duration="5629000" />
+      <workItem from="1597840740553" duration="9260000" />
+      <workItem from="1597905425000" duration="867000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1597764227665</created>
@@ -234,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597844823890</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mail">
+      <created>1597847646807</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597847646807</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +281,8 @@
     <MESSAGE value="Formulaire" />
     <MESSAGE value="maj" />
     <MESSAGE value="Marque" />
-    <option name="LAST_COMMIT_MESSAGE" value="Marque" />
+    <MESSAGE value="mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="mail" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="309" key="#Composer" timestamp="1597742094703">
@@ -274,6 +297,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597762453845" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597848861076">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597848861076" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1597751325067">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -298,6 +325,10 @@
     </state>
     <state width="468" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1597755017016" />
     <state width="1293" height="222" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597839754928" />
+    <state x="770" y="243" key="NewPhpClassDialog" timestamp="1597905948427">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="770" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597905948427" />
     <state x="795" y="443" key="NewPhpFileDialog" timestamp="1597845474830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -306,10 +337,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="221" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1597741941400" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597844837349">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597847647995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597844837349" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597847647995" />
     <state x="573" y="308" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597764086938">
       <screen x="0" y="0" width="1440" height="737" />
     </state>

@@ -3,27 +3,6 @@
 {% block title %}Hello ProduitController!{% endblock %}
 
 {% block body %}
-    {#
-    <div class="container">
-        <h2> Nos produits en Base</h2>
-        <div class="row flex">
-            {% for produit in produits %}
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="{{path('admin_produit_show',{'slug':produit.slug})}}">{{ produit.Titre }}</a>
-                            </h5>
-                            <p class="card-text">{{ produit.Description }}</p>
-                            <p class="card-text">{{ produit.Poids|number_format(1, ',', '.') }} Kgs</p>
-                            <div class="text-primary" style="font-weight: bold;font-size: 2rem">{{ produit.prixTTC | number_format(0,'',' ')}} € TTC</div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    #}
     <div class="container mt-4">
         <h1>Gérer les Produits</h1>
         {% for message in app.flashes('success') %}
