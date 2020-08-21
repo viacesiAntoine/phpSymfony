@@ -19,26 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2415891e-f502-4ac3-8d23-9b6c39d70893" name="Default Changelist" comment="de la merde">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200820124543.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/StockController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Stock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/StockType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/StockRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/mail/MailContactProduit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/stock/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/stock/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/stock/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/stock/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/stock/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/stock/show.html.twig" afterDir="false" />
+    <list default="true" id="2415891e-f502-4ac3-8d23-9b6c39d70893" name="Default Changelist" comment="mail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Client/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Client/ProduitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/client/produit/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/produit/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProduitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProduitType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/template/_formProduit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/template/_formProduit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +205,7 @@
       <workItem from="1597765659150" duration="1853000" />
       <workItem from="1597820830097" duration="14648000" />
       <workItem from="1597840740553" duration="9260000" />
-      <workItem from="1597905425000" duration="18600000" />
+      <workItem from="1597905425000" duration="27415000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1597764227665</created>
@@ -285,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597926582776</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="mail">
+      <created>1597931373976</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597931373976</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,11 +302,11 @@
     <MESSAGE value="Formulaire" />
     <MESSAGE value="maj" />
     <MESSAGE value="Marque" />
-    <MESSAGE value="mail" />
     <MESSAGE value="debut tp" />
     <MESSAGE value="Magasin" />
     <MESSAGE value="de la merde" />
-    <option name="LAST_COMMIT_MESSAGE" value="de la merde" />
+    <MESSAGE value="mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="mail" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="309" key="#Composer" timestamp="1597742094703">
@@ -369,10 +361,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="221" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1597741941400" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597926583854">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597931375195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597926583854" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597931375195" />
     <state x="573" y="308" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597764086938">
       <screen x="0" y="0" width="1440" height="737" />
     </state>

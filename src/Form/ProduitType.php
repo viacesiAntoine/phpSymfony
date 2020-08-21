@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Marque;
 use App\Entity\Produit;
+use App\Entity\Stock;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -27,7 +28,10 @@ class ProduitType extends AbstractType
                 'choices'=>$this->getColorChoice()
             ])
             ->add('DateCreation')
-            ->add('StockQte')
+            ->add('Stock',EntityType::class,[
+                'class'=>Stock::class,
+                'choice_label'=>'qte'
+            ])
             ->add('Actif')
             ->add('marque',EntityType::class,[
                 'class'=>Marque::class,
